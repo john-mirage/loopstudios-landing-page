@@ -22,6 +22,10 @@ module.exports = {
         ...defaultTheme.fontFamily.sans,
       ],
     },
+    fontSize: {
+      "header": ["1.75rem", { lineHeight: "2.5rem" }],
+      "hero": ["2.5rem", { lineHeight: "2.375rem" }],
+    },
     extend: {},
   },
   plugins: [],
