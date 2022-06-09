@@ -1,9 +1,9 @@
 function Hero() {
   return (
-    <section className="relative">
-      <img className="w-full h-auto" src="/src/images/mobile/image-hero.jpg" alt=""/>
-      <div className="container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6">
-        <h2 className="p-6 border-white border-2 text-hero font-light text-white uppercase">
+    <section className="relative flex w-full h-650 min-h-screen">
+      <img className="absolute z-10 top-0 left-0 w-full h-full object-cover" src="/src/images/mobile/image-hero.jpg" alt=""/>
+      <div className="relative z-30 container m-auto px-24">
+        <h2 className="px-28 py-24 border-white border-2 text-h2 font-light text-white uppercase">
           <span className="block">immersive</span>
           <span className="block">experiences</span>
           <span className="block">that</span>
