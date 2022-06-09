@@ -1,8 +1,9 @@
 import Navigation from "@components/navigation";
-import {useEffect, forwardRef} from "react";
+import {useEffect, forwardRef, ForwardedRef} from "react";
 import {motion} from "framer-motion";
 
-const Drawer = forwardRef((props, ref) => {
+const Drawer = forwardRef((props, ref: ForwardedRef<HTMLElement>) => {
+
   useEffect(() => {
     window.scroll(0, 0);
     document.body.classList.add("fixed", "w-full");

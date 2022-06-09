@@ -14,6 +14,7 @@ import fromAboveDesktop from "@images/desktop/image-from-above.jpg";
 import pocketBorealisDesktop from "@images/desktop/image-pocket-borealis.jpg";
 import curiosityDesktop from "@images/desktop/image-curiosity.jpg";
 import fisheyeDesktop from "@images/desktop/image-fisheye.jpg";
+import Project from "@components/project";
 
 const projects = [
   {
@@ -64,12 +65,7 @@ function Projects() {
       <h3 className="font-josefin text-h3 font-light text-black uppercase mb-48">our creations</h3>
       <div>
         {projects.map((project, index) => (
-          <div className="relative w-full h-120 mb-24 last:mb-0" key={String(index)}>
-            <img className="absolute z-10 top-0 left-0 w-full h-full object-cover" src={project.imageMobile} alt={project.text}/>
-            <div className="relative z-30 flex items-end w-full h-full bg-gradient-to-r from-overlay to-transparent px-20 py-24 text-left">
-              <p className="w-132 font-josefin text-h4 font-light text-white uppercase">{project.text}</p>
-            </div>
-          </div>
+          <Project project={project} key={String(index)} />
         ))}
         <button className="w-156 h-40 border-2 border-black font-alata text-button tracking-button text-black uppercase">see all</button>
       </div>

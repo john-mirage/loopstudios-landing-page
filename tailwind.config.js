@@ -53,6 +53,9 @@ module.exports = {
     letterSpacing: {
       "button": "0.05rem",
     },
+    transitionProperty: {
+      "project": "opacity, transform",
+    },
     extend: {},
   },
   plugins: [],

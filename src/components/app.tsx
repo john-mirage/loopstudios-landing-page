@@ -5,7 +5,7 @@ import Projects from "@components/projects";
 import Footer from "@components/footer";
 import {useState} from "react";
 import Drawer from "@components/drawer";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
@@ -17,11 +17,13 @@ function App() {
         drawerIsOpen={drawerIsOpen}
         setDrawerIsOpen={setDrawerIsOpen}
       />
-      <Hero />
-      <div className="container mx-auto px-24">
-        <Presentation />
-        <Projects />
-      </div>
+      <main>
+        <Hero />
+        <div className="container mx-auto px-24">
+          <Presentation />
+          <Projects />
+        </div>
+      </main>
       <Footer />
       <AnimatePresence>
         {drawerIsOpen && (
