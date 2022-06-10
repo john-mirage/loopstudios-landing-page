@@ -68,7 +68,7 @@ function Projects() {
           <Project project={project} key={String(index)} />
         ))}
       </div>
-      <button className="block w-156 h-40 border-2 border-black font-alata text-16 tracking-05 text-black uppercase lg:order-2 transition-colors hover:text-white hover:bg-black">see all</button>
+      <button className="block w-156 mx-auto h-40 border-2 border-black font-alata text-16 tracking-05 text-black uppercase lg:order-2 transition-colors hover:text-white hover:bg-black lg:mx-0">see all</button>
     </section>
   );
 }
