@@ -6,12 +6,18 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1114px',
+    },
     colors: {
       "white": "hsl(0, 0%, 100%)",
       "black": "hsl(0, 0%, 0%)",
       "dark-gray": "hsl(0, 0%, 55%)",
       "very-dark-gray": "hsl(0, 0%, 41%)",
       "overlay": "rgba(0, 0, 0, 0.7)",
+      "hero": "rgba(0, 0, 0, 0.5)",
       "transparent": "transparent",
     },
     spacing: {
@@ -30,7 +36,11 @@ module.exports = {
       "120": "12rem",
       "132": "13.2rem",
       "156": "15.6rem",
+      "160": "16rem",
+      "327": "32.7rem",
+      "450": "45rem",
       "650": "65rem",
+      "730": "73rem",
     },
     fontFamily: {
       "alata": [
@@ -45,7 +55,9 @@ module.exports = {
     fontSize: {
       "h1": ["2.8rem", { lineHeight: "4rem" }],
       "h2": ["4rem", { lineHeight: "3.8rem" }],
+      "h2-lg": ["7.2rem", { lineHeight: "7rem" }],
       "h3": ["3.2rem", { lineHeight: "3.2rem" }],
+      "h3-lg": ["4.8rem", { lineHeight: "4.8rem" }],
       "h4": ["2.4rem", { lineHeight: "2.4rem" }],
       "p": ["1.5rem", { lineHeight: "2.5rem" }],
       "button": ["1.6rem", { lineHeight: "2.4rem" }],
@@ -56,7 +68,11 @@ module.exports = {
     transitionProperty: {
       "project": "opacity, transform",
     },
-    extend: {},
+    extend: {
+      maxWidth: {
+        "327": "32.7rem",
+      },
+    },
   },
   plugins: [],
 }

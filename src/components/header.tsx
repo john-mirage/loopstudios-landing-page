@@ -1,4 +1,5 @@
 import {motion, AnimatePresence} from "framer-motion";
+import Navigation from "@components/navigation";
 
 interface Props {
   absolute: boolean;
@@ -16,7 +17,7 @@ function Header({ drawerIsOpen, setDrawerIsOpen }: Props) {
     <header className="absolute z-50 top-0 left-0 pt-32 w-full h-auto">
       <div className="container flex flex-row justify-between items-center mx-auto px-24">
         <h1 className="font-alata text-h1 font-normal text-white">loopstudios</h1>
-        <button className="relative w-40 h-40 -mr-8 text-white" onClick={toggleDrawer}>
+        <button className="relative w-40 h-40 -mr-8 text-white lg:hidden" onClick={toggleDrawer}>
           <AnimatePresence>
             {drawerIsOpen ? (
               <motion.svg
@@ -49,6 +50,9 @@ function Header({ drawerIsOpen, setDrawerIsOpen }: Props) {
             )}
           </AnimatePresence>
         </button>
+        <div className="hidden lg:block">
+          <Navigation drawer={false} />
+        </div>
       </div>
     </header>
   );

@@ -16,9 +16,12 @@ function Project({ project }: Props) {
   });
 
   return (
-    <div className="relative w-full h-120 mb-24 last:mb-0">
-      <img className="absolute z-10 top-0 left-0 w-full h-full object-cover" src={project.imageMobile} alt={project.text}/>
-      <div className="relative z-30 flex items-end w-full h-full bg-gradient-to-r from-overlay to-transparent px-20 py-24 text-left">
+    <div className="relative w-full pb-[40%] lg:pb-0 lg:h-450">
+      <picture className="absolute z-10 top-0 left-0 w-full h-full">
+        <source srcSet={project.imageDesktop} media="(min-width: 1114px)" />
+        <img className="w-full h-full object-cover" src={project.imageMobile} alt={project.text} />
+      </picture>
+      <div className="absolute z-20 top-0 left-0 flex items-end w-full h-full bg-gradient-to-r from-overlay to-transparent px-20 py-24 text-left lg:bg-gradient-to-t">
         <motion.p
           ref={ref}
           className="w-132 font-josefin text-h4 font-light text-white uppercase"
