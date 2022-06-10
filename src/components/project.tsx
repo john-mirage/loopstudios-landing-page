@@ -24,7 +24,7 @@ function Project({ project }: Props) {
       <div className="absolute z-20 top-0 left-0 flex items-end w-full h-full bg-gradient-to-r from-overlay to-transparent px-20 py-24 text-left lg:bg-gradient-to-t">
         <motion.p
           ref={ref}
-          className="w-132 font-josefin text-h4 font-light text-white uppercase"
+          className="w-132 font-josefin text-24 font-light text-white uppercase"
           animate={inView ? {opacity: 1, translateY: 0} : {opacity: 0, translateY: "100%"}}
           transition={{ duration: 1 }}
         >{project.text}</motion.p>

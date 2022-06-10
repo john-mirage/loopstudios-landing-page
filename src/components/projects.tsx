@@ -62,13 +62,13 @@ const projects = [
 function Projects() {
   return (
     <section className="text-center pb-96 lg:flex lg:flex-row lg:justify-between lg:items-center lg:flex-wrap lg:text-left">
-      <h3 className="font-josefin text-h3 font-light text-black uppercase mb-48 lg:order-1 lg:flex-1 lg:mb-0">our creations</h3>
+      <h3 className="font-josefin text-32 font-light text-black uppercase mb-48 lg:order-1 lg:flex-1 lg:mb-0">our creations</h3>
       <div className="space-y-24 mb-32 md:grid md:grid-cols-2 md:gap-32 md:space-y-0 lg:grid-cols-4 lg:order-3 lg:w-full lg:mb-0 lg:mt-48">
         {projects.map((project, index) => (
           <Project project={project} key={String(index)} />
         ))}
       </div>
-      <button className="block w-156 h-40 border-2 border-black font-alata text-button tracking-button text-black uppercase lg:order-2">see all</button>
+      <button className="block w-156 h-40 border-2 border-black font-alata text-16 tracking-05 text-black uppercase lg:order-2">see all</button>
     </section>
   );
 }

@@ -2,12 +2,12 @@ interface Props {
   drawer: boolean;
 }
 
-function Navigation({ drawer }: Props) {
+function MainNavigation({ drawer }: Props) {
   return (
     <nav>
       <ul className={`flex flex-col text-white ${drawer
-        ? "items-start font-josefin text-h4 uppercase font-light space-y-20"
-        : "items-center font-alata text-p font-normal space-y-16 lg:flex-row lg:space-y-0 lg:space-x-32"
+        ? "items-start font-josefin text-24 uppercase font-light space-y-20"
+        : "items-center font-alata text-15 font-normal space-y-16 lg:flex-row lg:space-y-0 lg:space-x-32"
       }`}>
         <li>
           <a href="#">About</a>
@@ -29,4 +29,4 @@ function Navigation({ drawer }: Props) {
   );
 }
 
-export default Navigation;
+export default MainNavigation;
