@@ -18,7 +18,7 @@ function Project({ project }: Props) {
   return (
     <div className="relative w-full pb-[40%] lg:pb-0 lg:h-450">
       <picture className="absolute z-10 top-0 left-0 w-full h-full">
-        <source srcSet={project.imageDesktop} media="(min-width: 1114px)" />
+        <source srcSet={project.imageDesktop} media="(min-width: 1162px)" />
         <img className="w-full h-full object-cover" src={project.imageMobile} alt={project.text} />
       </picture>
       <div className="absolute z-20 top-0 left-0 w-full h-full bg-gradient-to-r from-overlay to-transparent lg:bg-gradient-to-t"></div>

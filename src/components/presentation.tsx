@@ -1,5 +1,7 @@
 import {useInView} from "react-intersection-observer";
 import {motion} from "framer-motion";
+import interactiveImageMobile from "@images/mobile/image-interactive.jpg";
+import interactiveImageDesktop from "@images/desktop/image-interactive.jpg";
 
 function Presentation() {
   const { ref, inView } = useInView({
@@ -9,15 +11,16 @@ function Presentation() {
 
   return (
     <section className="pt-96 pb-92 lg:flex lg:flex-row lg:items-end lg:pt-160 lg:pb-160">
-      <motion.img
+      <motion.picture
         ref={ref}
         initial={{translateX: -80, opacity: 0}}
         animate={inView ? {translateX: 0, opacity: 1} : {translateX: -80, opacity: 0}}
         transition={{duration: 1}}
-        className="mb-40 w-full lg:flex-grow-0 flex-shrink-0 basis-auto lg:w-730 lg:mb-0 lg:mx-0"
-        src="/src/images/mobile/image-interactive.jpg"
-        alt=""
-      />
+        className="block mb-40 w-full lg:flex-grow-0 flex-shrink-0 basis-auto lg:w-730 lg:mb-0 lg:mx-0"
+      >
+        <source srcSet={interactiveImageDesktop} media="(min-width: 768px)" />
+        <img src={interactiveImageMobile} alt="" />
+      </motion.picture>
       <motion.div
         initial={{translateX: 80, opacity: 0}}
         animate={inView ? {translateX: 0, opacity: 1} : {translateX: 80, opacity: 0}}

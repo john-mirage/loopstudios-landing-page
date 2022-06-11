@@ -46,6 +46,7 @@ module.exports = {
       "450": "28.125rem",
       "650": "40.625rem",
       "730": "45.625rem",
+      "800": "50rem",
     },
     fontFamily: {
       "alata": [
