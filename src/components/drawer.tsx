@@ -16,7 +16,7 @@ const Drawer = forwardRef((props, ref: ForwardedRef<HTMLElement>) => {
   return (
     <aside ref={ref} className="fixed z-40 top-0 left-0 flex flex-col justify-center items-start w-full h-full bg-black">
       <div className="container mx-auto px-24 pt-96">
-        <MainNavigation drawer={true} />
+        <MainNavigation drawer={true} label="main navigation for the drawer" />
       </div>
     </aside>
   );

@@ -51,7 +51,7 @@ function Header({ drawerIsOpen, setDrawerIsOpen }: Props) {
           </AnimatePresence>
         </button>
         <div className="hidden lg:block">
-          <MainNavigation drawer={false} />
+          <MainNavigation drawer={false} label="main navigation for the header" />
         </div>
       </div>
     </header>
